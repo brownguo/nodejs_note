@@ -4,9 +4,10 @@ http.createServer((request, response)=>{
     let req_url = request.url
     response.writeHead(200, {
         "Content-Type":"text/html;charset=utf-8"
-    });
-    response.end(renderHTML(req_url))
-}).listen(5000,()=>{
+    })
+    response.write(renderHTML(req_url));
+    response.end()
+}).listen(8000,()=>{
     console.log("server start")
 })
 
