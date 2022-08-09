@@ -11,7 +11,7 @@ http.createServer((request, response)=>{
     console.log("server start")
 })
 
-function renderHTML(url) {
+function  renderHTML(url) {
     if(url === "/favicon.ico"){
         return ;
     }
